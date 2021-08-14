@@ -1,2 +1,3 @@
 cls  ------ Limpia la consola 
 ctrl + ñ ------ Se abre la consola de visual
+ctrl + p ------ menu interaccion Code
