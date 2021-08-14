@@ -1,0 +1,27 @@
+BASICS COMMANDS
+
+git init ---- se comienza a usar git
+
+git status ---- se verifica el estado del código
+
+git add --- para agregar
+
+git add nombreDelArchivo
+
+git log ---- sirve para ver los commits
+
+git commit ---- para crear un commmit
+
+git commit -m "NombreDelCommit" ---- para agregar un nuevo commit de forma directa
+
+git add . ---- para agregar todo de un solo (Hay un punto)
+
+git branch --- sirve para ver las ramas
+
+gitn log --oneline ---- sirve para ver las ramas de forma ordenada
+
+git diff nombreDelArchivo y extencion ---- sirve para ver los cambios que se realizaron 
+
+git branch nombreDeLaRama ---- Se crea una nueva ramas
+
+git checkout nombreDeRama ---- sirve para cambiar de ramas
