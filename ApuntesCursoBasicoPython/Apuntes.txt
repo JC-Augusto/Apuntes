@@ -1,0 +1,341 @@
+Palabras en ingles:
+String = cadenas
+integers = enteros 
+floats = flotantes
+
+
+_______________________________________________________________________________________________________
+OPERACIONES
+
+Para una suma: +
+para una resta: /
+para una multiplicación: *
+Para una división: /
+Para potencia: **
+Para el cociente de una división: //
+
+_______________________________________________________________________________________________________
+
+PARA ENTRADAS DE TEXTO
+
+input()
+
+para mostrar un texto en la entrada:
+
+Ejemplo:
+name = input("Ingrese su nombre: ")
+print(name)
+
+PARA EL CASTEO DE NUMEROS ENTEROS y CADENAS:
+
+edad = int(input())
+edad = str(input())
+
+___________________________________________________________________________________________________
+
+TIPO: BOOLEANOS
+
+Booleanos: True and False 
+
+_______________________________________________________________________________________________________
+
+SENTENCIA IF
+
+if condición:
+    declaraciones
+
+****************
+if condición:
+    declaraciones
+else: 
+    declaraciones 
+****************
+
+if condiciones:
+    declaraciones
+elif condición:
+    declaraciones
+
+
+OPERADORES BOOLEANOS
+and
+or 
+not 
+
+ej: 
+if condicion and condicion:
+    declaraciones
+
+_______________________________________________________________________________________________________
+
+SENTENCIA WHILE
+
+i = 1
+while i <= 5:
+    print(i)
+    i = i+1
+print("terminado")
+
+_______________________________________________________________________________________________________
+
+LISTAS
+ej:
+
+lista = ["hola","mundo","!"]
+
+print(lista[0])
+print(lista[1])
+print(lista[2])
+
+Todas las cadenas son vectores(listas)
+ej:
+
+saludo = "hola mundo"
+print (saludo[6])
+
+Tambien se pueden hacer agregar o multiplicar entre ellas
+
+nums = [0,1,2,3]
+print (nums+[4,5,6])
+print (nums*3)
+
+PARA BUSCAR UNA PALABRA, NUMERO O CARACTER DENTRO DE LA LISTA
+Ej:
+
+nums = [0,1,2,3]
+print (1 in nums)                   devuelve True
+print (8 in nums)                   devuelve False
+
+o se puede validar con un if
+
+if 3 in nums:
+    print("Si esta")
+else:
+    print("no esta")
+_______________________________________________________________________________________________________
+
+USO DE DEL BUCLE FOR
+
+letras = ["a","b","c","d"]
+
+for letras in letras:
+    print(letras + "!")
+
+
+OTRA FORMA DE HACERLO PODRIA SER:
+
+letras = ["a","b","c","d"]
+
+for X in letras:
+    print(X + "!")
+
+UTILIZANDO EL CICLO FOR PARA CONTAR LETRAS EN UN TEXTO
+
+texto = "probando el contador de letras"
+contador = 0
+
+for x in texto:
+    if(x == "d"):
+        contador += 1
+print (contador)
+
+_______________________________________________________________________________________________________
+
+FUNCION RANGE
+
+ej 1: USANDO 1 ARGUMENTO
+
+numeros = list(range(10))               Creará un vector o lista con los numeros del 0 al 9
+print (numeros)                         Imprimira el vector numeros
+
+ej 2: USANDO 2 ARGUMENTOS
+
+numeros = list(range(3,10))             Creara un vector o lista con los números del 3 al 9
+print (numeros)
+
+ej 3: USANDO 3 ARGUMENTOS
+
+numeros = list(range(3,10,2))
+print (numeros)
+
+Ej 4: USANDO 3 ARGUMENTOS; De forma decresiente 
+
+numeros = list(range(30,10,-2))
+print (numeros)
+
+_______________________________________________________________________________________________________
+
+USO DEL BUCLE FOR CON LA FUNCIÓN RANGE
+Ej 1: 
+
+for i in range(10):
+    print("hello!")                         Se imprimira "hello!" 10 veces
+
+
+
+Ej 2: 
+
+contador = 1
+for t in range(10):
+    print(str(contador)+". hello!")         Se imprimira "hello!" 10 veces de foma enumerada
+    contador +=1
+
+_______________________________________________________________________________________________________
+
+ACCIONES QUE SE PUEDEN HACER CON LAS LISTAS
+
+ej 1: 
+
+numeros = [1,2,3,45,50,55,80,90,100,]
+print(numeros[2:5])
+
+ej 2:
+
+numeros = [1,2,3,45,50,55,80,90,100,]
+print(numeros[2::2])                         Al dejar un espacio en blanco, representa el inicio o final de la lista
+                                             y el 2 al final de la lista represeta los saltos (de 2 en 2)
+
+
+ej 3:
+
+numeros = [1,2,3,45,50,55,80,90,100,]
+print(numeros[2:-3])                        el -3 cuenta de derecha a izquierda
+print(numeros[::-1])                        es una forma de invertir una lista 
+
+_______________________________________________________________________________________________________
+
+PRUEBA DE FOR
+
+A nadie le gusta la tarea, pero su profesor de matemáticas le ha asignado la tarea
+de encontrar la suma de los primeros N números. ¡Ahorremos algo de tiempo
+creando un programa que haga el cálculo por usted! Tome un número N como
+entrada y emita la suma de todos los números del 1 al N (incluido N). Ejemplo de
+entrada 100 Ejemplo de salida 5050 Explicación : La suma de todos los números
+del 1 al 100 es igual a 5050 .
+
+N = int(input())
+
+valor = 0
+sumatoria= 0
+
+for x in range(N):
+    if x != (N+1):
+        valor +=1
+        sumatoria = sumatoria + valor
+print(sumatoria)
+
+_______________________________________________________________________________________________________
+
+FUNCIONES : INCSERT, APPEND, LEN, INDEX, MAX, MIN, COUNT, REVERSE, format
+
+Función para contar las letras o elemtos de un vector
+
+nums = [1,2,3,4,5]
+index = 2
+nums.insert(index,11)               incerta el numero 11 en la posicion 2(que es lo que indica index)
+nums.append(6)                      agrega el numero 6 al final del vector
+print (len(nums))                   devolvera el valor "7"
+print(nums.index(3))                busca el elemento e imprime el primero que encuentra 
+
+max(nums)                           devuelve el maximo
+min(nums)                           devuelve el minimo
+nums.count(2)                       cuenta los valores de la lista 
+nums.remove(3)                      remueve el valor dado de la lista
+nums.reverse()                      invierte el vetor o lista
+
+
+nums = [4,5,6]
+msg = "Numbers: {0}{1}{2}".format(nums[0],nums[1],nums[2])
+print(msg)
+
+se imprimera: Numbers: 456
+
+_______________________________________________________________________________________________________
+
+MÁS FUNCIONES CON CADENAS: JOIN, REPLACE, STARTSWITH, ENDSWITH, UPPER, LOWER, SPLIT 
+
+print("----".join(["spam","eggs","ham"]))
+#prints "spam----eggs----ham"                               Une los elementos de la lista usando el separador indicado (en este caso "----")
+
+print("Hello Me".replace("Me","World"))
+#print "Hello World"                                        Replaza un elemento del vector por otro indicado
+
+print("This is sentence.".startswith("This"))
+#print "True"                                               Busca si la cadena empieza con la palabra indicada y devuelve un booleano 
+
+print("This is sentence.".endswith("sentence."))
+#print "True"                                               Busca si la cadena termina con la palabra indicada y devuelve un booleano 
+
+print("This is sentence.".upper())
+#print "THIS IS SENTENCE."                                  Convierte las palabras a mayusculas
+
+print("HELLO WORLD".lower())
+#print "hello world"                                        Convierte las palabras a minusculas
+
+print("spam, eggs, ham".split(","))                         Separa una cadena en elementos de un vector cada vez
+#print "['spam', ' eggs', ' ham']"                          que encuentre el elemento indicado (Este caso coma ",")
+
+
+_______________________________________________________________________________________________________
+
+        *****   FUNCIONES   ******
+Ejemplo 1: 
+
+def mi_funcion():
+    print("spam")
+    print("spam")
+    print("spam")
+
+mi_funcion()                    al ejecutar mi_funcion() se ejecurara la acción antes planteada
+
+
+Ejemplo 2: 
+
+def imprimientoConExclamacion(palabra):             Se puede agregar argumentos dentro de la Función
+    print(palabra + "!")                            que se pediran al declararla
+
+imprimientoConExclamacion("hello")
+imprimientoConExclamacion("Como estan")
+
+
+Ejemplo 3: 
+
+def maximo(x,y):                    Se pueden agregar varios argumentos a la funcion: 
+    if x>y:                         Estos argumentos se pueden retornar por medio de un (return)   
+        return x
+    else:
+        return y
+ 
+print(max(4,7))                     Funcion "max" ya definida en python
+print(maximo(7,8))                  Nuestra funcion que hace lo mismo pero creada por nosotros
+
+z = maximo(8,5)                     Otra forma de poder llamarla 
+print(z)
+
+
+
+_______________________________________________________________________________________________________
+
+PROBLEMA
+
+Estás trabajando en un motor de búsqueda. ¡Cuida tu espalda Google! El código
+dado toma un texto y una palabra como entrada y los pasa a una función llamada
+búsqueda () . La función de búsqueda () debería devolver "Palabra encontrada" si la
+palabra está presente en el texto, o "Palabra no encontrada", si no lo está. Entrada
+de muestra "Esto es increíble" "Impresionante" Palabra de salida de muestra encontrada. 
+
+
+solución: 
+
+text = input()
+word = input()
+
+def search(text,word):
+    
+    if word in text:
+        print("Word found")
+    else:
+        print("Word not found")
+
+print(search(text, word))
+

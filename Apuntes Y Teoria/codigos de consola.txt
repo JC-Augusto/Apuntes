@@ -1,0 +1,2 @@
+cls  ------ Limpia la consola 
+ctrl + ñ ------ Se abre la consola de visual
