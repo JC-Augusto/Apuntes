@@ -25,3 +25,7 @@ git diff nombreDelArchivo y extencion ---- sirve para ver los cambios que se rea
 git branch nombreDeLaRama ---- Se crea una nueva ramas
 
 git checkout nombreDeRama ---- sirve para cambiar de ramas
+
+git remote add origen URL(link de git)  ---- para agregar la direccion de GitHub donde se guardara
+
+git push -u origin master   ---- para subirlo 
