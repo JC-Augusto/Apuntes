@@ -29,3 +29,5 @@ git checkout nombreDeRama ---- sirve para cambiar de ramas
 git remote add origen URL(link de git)  ---- para agregar la direccion de GitHub donde se guardara
 
 git push -u origin master   ---- para subirlo 
+
+git merge ramaQueSeQuiereUnir  >>>>>>>>>>> si estas en master, la ramaQueSeQuiereUnir se agregara a master 
