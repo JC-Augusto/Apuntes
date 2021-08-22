@@ -256,3 +256,99 @@ form carpeta.carpeta.carpeta(etc) import funcion *
 
 _______________________________________________________________________________________________________________________
 
+************ CLASES ********************************
+Se pordria decir que esuna plantilla, la representación de un objeto de la realidad que nos sirve
+al mometo de programar. 
+
+una clase puede ir almacenando funciones dentro, y va dentro de un archivo de
+
+clase nombre(): 
+
+------------ EN POO -----------------
+EJEMPLO:
+
+class Persona(): 
+    #Propiedades y atributos
+    apellidos = ""
+    nombres = ""
+    edad = 0
+    despierta = False
+
+    # funcionalidades
+    def despertar(self):
+        #self: es un parametro que hace referencia a la istancia u objeto perteneciente a la clase.
+        self.despierta = True 
+        print("Buen dia.")
+
+persona1 = Persona()
+persona1.apellidos = "Hernandez Fuentes"
+print(persona1.apellidos)
+persona1.despertar()
+print(persona1.despierta)
+
+persona2 = Persona()
+persona2.apellidos = "Garcia Fuentes"
+print(persona2.apellidos)
+print(persona2.despierta)
+
+________________________________________________________________________________________________________________________________
+
+********** METODO : __init__()    **************************
+
+El metodo init es el constructor de la clase.
+
+EJEMPLO: de forma normal sin usarlo de constructor especifico.
+
+class Curso(): 
+
+    def __init__(self):
+        self.nombre = "Matemática"
+        self.creditos = 5
+        self.curso = "Ingenieria"
+
+curso1 = Curso()
+print(curso1.nombre)
+
+EJEMPLO: usandolo como constructor 
+
+class Curso(): 
+
+    def __init__(self,nombre,creditos, profesion):
+        self.nombre = nombre
+        self.creditos = creditos
+        self.curso = profesion
+
+curso1 = Curso("Matemática",5,"Ingenieria")
+print(curso1.nombre)
+
+curso1 = Curso("Sociales",3,"Ingenieria")
+print(curso1.nombre)
+
+________________________________________________________________________________________________________________________________
+
+************************ ENCAPSULAMIENTO DE DATOS ********************************
+Los atributos que se encuentre encapuslados, solo se pudrán usar dentro de la clase misma. 
+En este caso: el atributo encapsulado es: "imparticion" y para encapsularlo se uso "__" (doble guion bajo adelante del atributo).
+
+Se puede acceder al atributo desde la clase, pero si se intenta imprimir o llamarlo fuera de la clase marcara error 
+
+class Curso(): 
+
+    def __init__(self,nombre,creditos, profesion):
+        self.nombre = nombre
+        self.creditos = creditos
+        self.curso = profesion
+        self.__imparticion = "Presencial" #Propiedad encapsulada
+
+    def mostrarDatos(self):
+        dat = "Nombre: {0} / Creditos: {1} / Modo de impartición: {2}"
+        print(dat.format(self.nombre, self.creditos, self.__imparticion))
+
+curso1 = Curso("Matemática",5,"Ingenieria")
+curso1.mostrarDatos()
+print(curso1.nombre)
+#print(curso1.__imparticion) >>>>>>>>>>>>>>> esta en forma de comentario para que no tire error ya que el atributo no existe fuera de la clase por estar encapsulado
+
+________________________________________________________________________________________________________________________________________________ 
+
+

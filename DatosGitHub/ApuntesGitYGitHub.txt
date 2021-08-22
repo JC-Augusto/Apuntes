@@ -18,7 +18,7 @@ git add . ---- para agregar todo de un solo (Hay un punto)
 
 git branch --- sirve para ver las ramas
 
-gitn log --oneline ---- sirve para ver las ramas de forma ordenada
+git log --oneline ---- sirve para ver las ramas de forma ordenada
 
 git diff nombreDelArchivo y extencion ---- sirve para ver los cambios que se realizaron 
 
