@@ -1,0 +1,56 @@
+digraph L {
+    node[shape = box  fillcolor =  "#FFEDBB" style = filled ]
+    
+    subgraph cluster_p{
+        label = "Matriz Dispersa"
+        bgcolor = "#398D9C"
+        raiz[label = "0,0"] 
+        edge[dir = "both"]
+        /*Aqui creamos las cabeceras de las filas*/
+        Fila1[label = "1" , group = 1];
+        Fila2[label = "2" , group = 1];
+        Fila3[label = "3" , group = 1];
+        Fila4[label = "4" , group = 1];
+        Fila5[label = "5" , group = 1];
+        /*
+        Creamos la primer columna solo como nodos
+        fila1 -> fila2;
+        fila2 -> fila3;
+        fila3 -> fila4;
+        fila4 -> fila5;
+
+        */
+        /*aqui enlazamos los nodos a las filas*/
+
+        Fila1 -> Fila2;
+        Fila2 -> Fila3; 
+        Fila3 -> Fila4;
+        Fila4 -> Fila5;
+
+        //aqui vamos a unir la raiz con las filas y las columnas
+
+        raiz -> Fila1;
+        raiz -> Columna1;
+        
+        /*aqui enlazamos los nodos de las COLUMNAS*/
+        Columna1[label = "1" , group = 2, fillcolor=yellow]
+        Columna2[label = "2" , group = 3, fillcolor=yellow]
+        Columna3[label = "3" , group = 4, fillcolor=yellow]
+        Columna4[label = "4" , group = 5, fillcolor=yellow]
+        Columna5[label = "5" , group = 6, fillcolor=yellow]
+        
+        /*aqui enlazaremos los nodos de las cabeceras de las columnas*/
+        Columna1 -> Columna2 -> Columna3 -> Columna4 -> Columna5;
+
+        {rank = same ; raiz;Columna1;Columna2;Columna3;Columna4;Columna5}
+
+        Nodo1[label ="1,1" , group = 2, fillcolor = green]
+        Columna2 -> Nodo1;
+        Fila2 -> Nodo1; 
+
+        Nodo2[label = "1,2", group = 4, fillcolor = green ]
+        Columna2 -> Nodo2;
+        Fila3 -> Nodo2
+        
+    }
+}

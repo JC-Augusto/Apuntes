@@ -13,4 +13,4 @@ class Curso():
 curso1 = Curso("Matemática",5,"Ingenieria")
 curso1.mostrarDatos()
 print(curso1.nombre)
-print(curso1.__imparticion)
+#print(curso1.__imparticion)
