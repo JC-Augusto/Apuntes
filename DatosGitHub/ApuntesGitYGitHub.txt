@@ -33,3 +33,5 @@ git remote add origen URL(link de git)  ---- para agregar la direccion de GitHub
 git push -u origin master   ---- para subirlo 
 
 git merge ramaQueSeQuiereUnir  >>>>>>>>>>> si estas en master, la ramaQueSeQuiereUnir se agregara a master 
+
+git reset --hard <commit-id>   ---------- Colocamos el id y se regresa a ese commmit (guardar el nuevo commit con otro commit)

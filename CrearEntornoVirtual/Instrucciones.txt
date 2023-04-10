@@ -1,0 +1,14 @@
+Dentro de la carpeta que se desea crear el entorno virtual:
+
+Abrir una nueva terminal visual:(ctrl+ñ)
+excribir: virtualenv -p python3 env                   "Se instalara python3 y el "ENV" es el nombre por defecto que se le pone a los entornos virtualest
+
+para activar el entorno virtual: .\env\Scripts\activate     "Se puede escribir env+tab Scr+tab Ac+tab para que se escriba rapido"
+
+pip list       ------>   se puede usar para ver las librerias que estan activas en el entorno vitually
+
+deactivate   -------> para desaactivar el entorno vitually
+
+pip freeze > requirements.txt --------------> para obtener las librerias intaladas en el entorno virtual
+
+pip install -r .\requirements.txt -------------->   para instalar las librerias que se usan en el entorno virutal (esto es cuando se copian los archivos y se quiere usar en un nuevo entorno virtual)
