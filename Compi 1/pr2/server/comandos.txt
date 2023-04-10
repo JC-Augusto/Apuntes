@@ -1,0 +1,29 @@
+npm init -y
+{para iniciar el proyecto de node}
+
+npm i --save-dev typescript ts-node nodemon
+{
+    Instalar las dependencias de desarrollo (typescript y nodemon(nos permite recompilar el proyecto si apagar el servidor))
+}
+
+npx tsc --init
+{
+    Se inicia el proyecto de typescript
+}
+
+npm i --save express dotenv morgan cors body-parser config lodash
+{
+    dependencias globales
+        express: levantar el servidor
+        dotenv: manejar las variables de entorno
+        morgan: verificar trafico del servidor
+        cors: entrada y salida de trafico del servidor 
+        body-parser: parsear las entradas como json 
+        config: para manejar las variables de configuraciones
+        lodash: tratar con los json mas facil
+}
+
+npm i --save-dev @types/express @types/cors @types/morgan @types/node @types/config @types/lodash copy rimraf
+{
+    tipos de datos
+}

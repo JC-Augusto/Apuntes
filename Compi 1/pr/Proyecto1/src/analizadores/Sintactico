@@ -1,0 +1,136 @@
+package analizadores; 
+import java_cup.runtime.*;
+
+parser code 
+{:
+    /**
+     * Método al que se llama automáticamente ante algún error sintactico.
+     **/ 
+    public void syntax_error(Symbol s){ 
+        System.out.println("Error Sintáctico en la Línea " + (s.left) +
+        " Columna "+s.right+ ". No se esperaba este componente: " +s.value+"."); 
+    } 
+
+    /**
+     * Método al que se llama automáticamente ante algún error sintáctico 
+     * en el que ya no es posible una recuperación de errores.
+     **/ 
+    public void unrecovered_syntax_error(Symbol s) throws java.lang.Exception{ 
+        System.out.println("Error síntactico irrecuperable en la Línea " + 
+        (s.left)+ " Columna "+s.right+". Componente " + s.value + 
+        " no reconocido."); 
+    }  
+:}
+
+terminal String PTCOMA, PARIZQ, PARDER, CORIZQ, CORDER, GBAJO;
+terminal String MAS,MENOS,POR,DIVIDIDO,MODULO,POTENCIA;
+terminal String NUMERO,CADENA,CARACTER,NOMBRE;
+terminal String REVALUAR;
+
+
+terminal String MAYOR,MENOR,MAYOROIGUAL,MENOROIGUAL,ESIGUAL,ESDIFERENTE;
+terminal String OR,AND,NOT;
+terminal String INICIO, FIN; 
+terminal String INGRESAR,COMO,CONVALOR;
+terminal String COMA,ASIGNACION;
+terminal String SI,FINSI,DELOCONTRARIO,OSI;
+
+
+non terminal ini;
+non terminal instrucciones;
+non terminal segmentacion;
+non terminal instruccion;
+non terminal instruccionSeg;
+non terminal tipoSeg;
+
+
+non terminal comentario; 
+
+
+non terminal delcaracion;
+non terminal asignacion;
+non terminal condSi;
+non terminal selecMult;
+non terminal cicloPara;
+non terminal cicloMientras;
+non terminal cicloHasta;
+non temrinal retorno; 
+non terminal ejecutar;
+non terminal impresion;
+
+precedence left MAS,MENOS;
+precedence left POR,DIVIDIDO;
+
+start with ini; 
+
+ini::= INICIO instrucciones;
+
+instrucciones::= error instrucciones
+|segmentacion tipoSeg
+| FIN 
+| instruccion instrucciones 
+;
+
+tipoSeg::= funcion | metodo;
+funcion::= instruccionesFuncion;
+metodo::= instruccionesMetodo;
+
+
+instruccion::= error instrucciones 
+| comentario instrucciones
+| comentario instruccion
+
+| declaracion instrucciones
+| declaracion comentario
+| declaracion instruccion
+
+| asignacion instrucciones
+| asignacion comentario
+| asignacion intruccion
+
+| condSi instrucciones
+| condSi comentario
+| condSi intruccion
+
+| selecMult instrucciones
+| selecMult comentario
+| selecMult instruccion
+
+| cicloPara instrucciones
+| cicloPara comentario
+| cicloPara instruccion
+
+| cicloMientras instrucciones
+| cicloMientras comentario
+| cicloMientras instruccion
+
+| cicloHasta instrucciones
+| cicloHasta comentario
+| cicloHasta instruccion
+
+| retorno instrucciones
+| retorno comentario
+| retorno instruccion
+
+| ejecutar instrucciones
+| ejecutar comentario
+| ejecutar instruccion
+
+| impresion instrucciones
+| impresion comentario
+| impresion instruccion
+;
+
+declaracion::= error instrucciones
+| INGRESAR GBAJO NOMBRE GBAJO COMO TNUMERO CONVALOR NUMERO instruccion 
+| INGRESAR GBAJO NOMBRE GBAJO COMO TCADENA CONVALOR CADENA instruccion
+| INGRESAR GBAJO NOMBRE GBAJO COMO TBOOLEAN CONVALOR VERDADERO instruccion
+| INGRESAR GBAJO NOMBRE GBAJO COMO TBOOLEAN CONVALOR FALSO instruccion
+| INGRESAR GBAJO NOMBRE GBAJO COMO TCARACTER CONVALOR CARACTER instruccion
+
+| INGRESAR GBAJO NOMBRE GBAJO COMO TNUMERO CONVALOR NUMERO instrucciones
+| INGRESAR GBAJO NOMBRE GBAJO COMO TCADENA CONVALOR CADENA instrucciones
+| INGRESAR GBAJO NOMBRE GBAJO COMO TBOOLEAN CONVALOR VERDADERO instrucciones
+| INGRESAR GBAJO NOMBRE GBAJO COMO TBOOLEAN CONVALOR FALSO instrucciones
+| INGRESAR GBAJO NOMBRE GBAJO COMO TCARACTER CONVALOR CARACTER instrucciones
+;
