@@ -1,0 +1,17 @@
+  
+Explicacion tokens
+
+TOKEN               PATRON                             ER      
+
+palabra             Sucesión de una o más letras       letra+  -> letra(letra*)
+
+dospuntos           Símbolo :                           \:     -> :              
+puntocoma           Símbolo ;                          \;      -> ;
+
+entero_positivo     secuencia de uno o más digitos      digito+  ->  digito(digito*) 
+error               cualquier caracter que no sea lenguaje
+
+
+
+
+(palabra | dospuntos | puntocoma | entero_positivo)*

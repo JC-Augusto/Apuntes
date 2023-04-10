@@ -1,0 +1,25 @@
+TITULO="Poke ball"3;4
+2	ANCHO=300;
+        ALTO=300;
+        FILAS@=12;7*
+        COLUMNAS=12;
+        //CELDAS = {
+
+4	[9,8,TRUE,#CDCDCD]4,4
+	[10,8,TRUE,#000000]
+98-      };15
+3        3FILTROS8 = MIRRORX3,MIRRORY4;
+
+@@@@
+
+TITULO="Poke"; --
+        ANCHO=200;
+        ALTO=200;
+        FILAS@=12;7
+        COLUMNAS=12;
+        //CELDAS = {6
+4			4[9,8,TRUE,#CDCDCD],
+			[10,8,TRUE,#000000]
+98-        };15
+3        3FILTROS8 = MIRRORX3,MIRRORY4;
+@@@@

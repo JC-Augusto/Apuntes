@@ -1,0 +1,7 @@
+
+    digraph L{node[shape = box  fillcolor =  "#FFEDBB" style = filled ]subgraph cluster_p{
+    label = "TERRENO A RECORRER"
+    bgcolor = "#398D9C"
+    
+    hola -> como estas  
+    }}
